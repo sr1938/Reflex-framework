@@ -2,7 +2,7 @@
 import locale
 
 # Set the locale to Indian for currency formatting
-locale.setlocale(locale.LC_ALL, 'en_IN')
+locale.setlocale(locale.LC_ALL, 'en_IN.UTF-8')
 
 def calculate(form_data: dict):
     sip = int(form_data['sip_amount'])
