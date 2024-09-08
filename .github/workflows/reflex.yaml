@@ -17,10 +17,19 @@ jobs:
     steps:
     - name: Checkout Repository
     - uses: actions/checkout@v3
+
+    steps:
+    - name: Setup python
     - uses: actions/setup-python@v3
     - run: |
         python -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
-        reflex init
-        reflex run      
+              
+    steps:
+    - name: Initialize reflex
+    - run: reflex init
+              
+    steps:
+    - name: Run reflex
+    - run: reflex run
