@@ -12,8 +12,7 @@ jobs:
     defaults:
        run:
          shell: bash
-         working-directory: .
-         
+         working-directory: .   
 
     steps:
     - name: Checkout Repository
@@ -24,14 +23,22 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        pip install -r requirements.txt
+
+    - name: Install reflex
+      working-directory: SIP-calculator
+      run: |
+        pip install reflex
+
     - name: Check version
-      run: reflex --version
+      run: |
+        reflex --version
               
     - name: Initialize reflex
       working-directory: SIP-calculator
-      run: reflex init
+      run: |
+        reflex init
               
     - name: Run reflex
       working-directory: SIP-calculator
-      run: reflex run
+      run: |
+        reflex run
