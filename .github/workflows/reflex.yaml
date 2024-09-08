@@ -25,6 +25,8 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
+    - name: Check version
+      run: echo reflex --version
               
     - name: Initialize reflex
       working-directory: SIP-calculator
