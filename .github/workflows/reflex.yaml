@@ -18,6 +18,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+    - name: Refresh Locale
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y locales
+        sudo locale-gen en_IN.UTF-8
+
     - name: Setup python
       working-directory: SIP-calculator
       run: |
