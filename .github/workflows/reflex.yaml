@@ -13,23 +13,23 @@ jobs:
        run:
          shell: bash
          working-directory: .
+         
 
     steps:
     - name: Checkout Repository
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
 
-    steps:
     - name: Setup python
-    - uses: actions/setup-python@v3
-    - run: |
+      uses: actions/setup-python@v3
+      run: |
         python -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
               
-    steps:
     - name: Initialize reflex
-    - run: reflex init
+      working-directory: SIP-calculator
+      run: reflex init
               
-    steps:
     - name: Run reflex
-    - run: reflex run
+      working-directory: SIP-calculator
+      run: reflex run
