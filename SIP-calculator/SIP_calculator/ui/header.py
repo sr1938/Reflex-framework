@@ -10,6 +10,9 @@ def header():
         rx.hstack(
             rx.heading("SIP Calculator", size="8"),
             rx.spacer(),
+            rx.text("Made by",size="1", color="tomato",weight="light"),
+            rx.text(" Shubham Rajput",size="6", color="tomato",weight="medium"),
+            rx.link(rx.button("in",size="8"), href="https://www.linkedin.com/in/shubhsmiles/"),
             rx.color_mode.button(position="left"),
             rx.vstack(
                 rx.moment(State.date_now, format="YYYY-MM-DD"),
