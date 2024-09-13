@@ -15,25 +15,25 @@ def index():
                 rx.text(f"Invested Amount: Rs {State.invested}"),
                 rx.text(f"Returns: Rs {State.returns}"),
                 spacing="5",
-                padding="3px",
+                padding="1px",
                 width="100%",
                 align="center",
             ),
             border_radius="10px",
             border_width="medium",
-            width="80%",
-            margin="13px auto",  # Centering horizontally
-            padding="13px",
+            width="100%",
+            margin="1px auto",  # Centering horizontally
+            padding="8px",
             background_color="var(--plum-2)",
-            justify="center",
+            justify="center auto",
             align="center",
         ),
-        width="90%",
+        width="100%",
         spacing="5",
         justify="center",
         align="center",
         min_height="65vh",
-        padding="20px",
+        padding="8px",
     )
 
 app = rx.App()

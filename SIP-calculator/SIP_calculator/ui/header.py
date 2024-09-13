@@ -21,10 +21,10 @@ def header():
         ),
         background_color="var(--plum-3)",
         border_radius="10px",
-        width="80%",  # Adjusted width of the form to better fit in the view
+        width="100%",  # Adjusted width of the form to better fit in the view
         spacing="2",
         justify="between",
         align="stretch",        
-        margin="16px auto",  # Centering horizontally
-        padding="13px",
+        margin="1px auto",  # Centering horizontally
+        padding="8px",
     )
